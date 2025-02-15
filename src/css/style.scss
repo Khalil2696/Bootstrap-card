@@ -4,13 +4,14 @@
 @import "bootstrap/scss/mixins";
 
 // Custom Bootstrap Variables
-$nav-tabs-border-radius: 0; // Removes tab border radius
+$nav-tabs-border-radius: 10px; // Removes tab border radius
 $card-border-radius: 0; // Removes border radius from card
 $card-spacer-x: 1.25rem; // Adjusts card padding
 $card-cap-padding-x: 1.25rem; // Header padding
+$card-cap-padding-y: 1.25rem; // Header padding
 $list-group-item-padding-x: 1.25rem; // List padding
+$list-group-item-padding-y: 1.25rem; // List padding
 $blue: #001df9; // Primary Color
-$list-group-item-action-active-bg-color: #6c757d;
 
 
 
@@ -60,7 +61,7 @@ $list-group-item-action-active-bg-color: #6c757d;
 
 .loading-container {
   @extend .d-flex, .flex-column, .align-items-center, .justify-content-center;
-  height: 200px;
+  height: 300px;
   font-size: 1.2rem;
   font-weight: bold;
 }
