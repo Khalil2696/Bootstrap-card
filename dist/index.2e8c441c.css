@@ -1,12 +1,37 @@
+.card-contextual {
+  color: #fff;
+  background-color: #c2a3ee;
+}
+
+.card-contextual .card-header, .card-contextual .card-footer {
+  background-color: inherit;
+  color: inherit;
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.card-contextual .card-body {
+  background-color: inherit;
+  color: inherit;
+  padding: 1.25rem;
+}
+
+.card-contextual .list-group-item {
+  color: inherit;
+  background-color: #0000;
+}
+
 .nav-tabs .nav-link {
-  color: #000;
-  background-color: #dee2e6;
+  color: #fff;
+  background-color: #c2a3ee;
   margin: 0 .25rem;
   padding: .75rem 1.25rem;
 }
 
 .nav-tabs .nav-link:hover {
-  background-color: #ced4da;
+  background-color: #c2a3ee;
+  border-bottom: 0;
 }
 
 .image-container {

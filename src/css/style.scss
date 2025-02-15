@@ -12,17 +12,88 @@ $card-cap-padding-y: 1.25rem; // Header padding
 $list-group-item-padding-x: 1.25rem; // List padding
 $list-group-item-padding-y: 1.25rem; // List padding
 $blue: #001df9; // Primary Color
+$primary: #c2a3ee;
+$warning: #ff4136;
+$dark: #5d666f;
 
+// Custom Contextual Styles for Card Component
+@mixin card-contextual($context) {
+  // Define styles for each contextual variant
+  @if $context == primary {
+    background-color: $primary;
+    color: $white;
+  }
+  @else if $context == secondary {
+    background-color: $secondary;
+    color: $white;
+  }
+  @else if $context == success {
+    background-color: $success;
+    color: $green;
+  }
+  @else if $context == danger {
+    background-color: $danger;
+    color: $white;
+  }
+  @else if $context == warning {
+    background-color: $warning;
+    color: $black;
+  }
+  @else if $context == info {
+    background-color: $info;
+    color: $black;
+  }
+  @else if $context == light {
+    background-color: $light;
+    color: $black;
+  }
+  @else if $context == dark {
+    background-color: $blue;
+    color: $dark;
+  }
+  @else {
+    background-color: transparent;
+    color: inherit;
+  }
 
+  // Apply the contextual styles to card header, body, and footer
+  .card-header,
+  .card-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    background-color: inherit;
+    color: inherit;
+  }
+  .card-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background-color: inherit;
+    color: inherit;
+  }
 
-// Custom Styles
+  .list-group-item {
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+// Card component with contextual class
+.card-contextual {
+  @include card-contextual(primary); // Change 'primary' to your desired context (secondary, success, etc.)
+}
+
+// Custom Styles for Other Elements
 .nav-tabs .nav-link {
-  background-color: $gray-300; 
-  color: $black;
+  background-color: #c2a3ee; 
+  color: $white;
   padding: 0.75rem 1.25rem;
   margin: 0 0.25rem;
   &:hover {
-    background-color: $gray-400;
+    background-color: $primary;
+    border-bottom: 0;
   }
 }
 
@@ -49,14 +120,14 @@ $blue: #001df9; // Primary Color
 
 // Loading Spinner
 .spinner {
-    margin-top: 10px;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
 }
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .loading-container {
@@ -77,6 +148,3 @@ $blue: #001df9; // Primary Color
 
 // Import Bootstrap with modified variables
 @import "~bootstrap/scss/bootstrap";
-
-
-
